@@ -1,0 +1,32 @@
+Script started on 2026-11-04 16:57:57-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="123" LINES="3"]
+]0;vcbpe@vcbpe:~/Projects/syncMETROREC[?2004h
+[1;36msyncMETROREC[0m [3;36mmain[0m [36m? [1m❯[0m make
+[?2004lgcc -Wall -Wextra -O2 -pthread -c -o src/sync_car.o src/sync_car.c
+gcc -Wall -Wextra -O2 -pthread -c -o src/sync_car-runner.o src/sync_car-runner.c
+[01m[Ksrc/sync_car-runner.c:[m[K In function ‘[01m[Kalarm_handler[m[K’:
+[01m[Ksrc/sync_car-runner.c:54:24:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfoo[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-16.2.0/gcc/Warning-Options.html#index-Wno-unused-parameter-Wunused-parameter]8;;[m[K]
+   54 | void alarm_handler([01;35m[Kint foo[m[K)
+      |                    [01;35m[K~~~~^~~[m[K
+gcc -Wall -Wextra -O2 -pthread -o sync_car src/sync_car.o src/sync_car-runner.o
+]0;vcbpe@vcbpe:~/Projects/syncMETROREC[?2004h
+[1;36msyncMETROREC[0m [3;36mmain[0m [36m? [1m❯[0m [K[1;36msyncMETROREC[0m [3;36mmain[0m [36m? [1m❯[0m [K[1;36msyncMETROREC[0m [3;36mmain[0m [36m? [1m❯[0m [K[1;36msyncMETROREC[0m [3;36mmain[0m [36m? [1m❯[0m [K[1;36msyncMETROREC[0m [3;36mmain[0m [36m? [1m❯[0m [K[1;36msyncMETROREC[0m [3;36mmain[0m [36m? [1m❯[0m [K[1;36msyncMETROREC[0m [3;36mmain[0m [36m? [1m❯[0m [K[1;36msyncMETROREC[0m [3;36mmain[0m [36m? [1m❯[0m [K[1;36msyncMETROREC[0m [3;36mmain[0m [36m? [1m❯[0m [K[1;36msyncMETROREC[0m [3;36mmain[0m [36m? [1m❯[0m ./sycn[K[Knc_car
+[?2004lcar entering station with 33 free seats
+car departed station with 33 new passenger(s) (expected 33)
+car entering station with 37 free seats
+car departed station with 37 new passenger(s) (expected 37)
+car entering station with 14 free seats
+car departed station with 14 new passenger(s) (expected 14)
+car entering station with 37 free seats
+car departed station with 16 new passenger(s) (expected 16)
+Looks good!
+]0;vcbpe@vcbpe:~/Projects/syncMETROREC[?2004h
+[1;36msyncMETROREC[0m [3;36mmain[0m [36m? [1m❯[0m [7mfor i in $(seq 1 200); do ./sync_car > /dev/null 2>&1 || { echo "FALHOU na execucao $i"; break; }; do[27m[7mn[27m[7me; echo "fim"[27m[A[1;36msyncMETROREC[0m [3;36mmain[0m [36m? [1m❯[0m for i in $(seq 1 200); do ./sync_car > /dev/null 2>&1 || { echo "FALHOU na execucao $i"; break; }; done; echo "fim"
+[?2004lfim
+]0;vcbpe@vcbpe:~/Projects/syncMETROREC[?2004h
+[1;36msyncMETROREC[0m [3;36mmain[0m [36m? [1m❯[0m make clean
+[?2004lrm -f src/sync_car.o src/sync_car-runner.o sync_car
+]0;vcbpe@vcbpe:~/Projects/syncMETROREC[?2004h
+[1;36msyncMETROREC[0m [3;36mmain[0m [36m? [1m❯[0m exit
+[?2004lexit
+
+Script done on 2026-11-04 16:59:50-03:00 [COMMAND_EXIT_CODE="0"]
